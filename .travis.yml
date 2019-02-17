@@ -4,8 +4,8 @@ group: travis_latest
 language: go
 
 go:
-  - "1.10.x"
-  - "1.11.x"
+  - "1.10.8"
+  - "1.11.5"
 
 # first part of the GOARCH workaround
 # setting the GOARCH directly doesn't work, since the value will be overwritten later
@@ -24,9 +24,9 @@ env:
 # Only run them in the most recent one.
 matrix:
   exclude:
-  - go: "1.10.4"
+  - go: "1.10.8"
     env: TRAVIS_GOARCH=amd64 TESTMODE=lint
-  - go: "1.10.4"
+  - go: "1.10.8"
     env: TRAVIS_GOARCH=386 TESTMODE=lint
 
 # second part of the GOARCH workaround
