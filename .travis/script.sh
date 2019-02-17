@@ -6,8 +6,7 @@ go get -t ./...
 if [ ${TESTMODE} == "lint" ]; then 
   curl -L https://git.io/vp6lP | sh
   export PATH="./bin/:$PATH"
-  ls
-  pwd
+  which gometalinter
   gometalinter --debug --deadline=300s ./...
 fi
 
