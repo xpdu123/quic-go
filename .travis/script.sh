@@ -7,7 +7,9 @@ if [ ${TESTMODE} == "lint" ]; then
   go get github.com/alecthomas/gometalinter
   curl -L https://git.io/vp6lP | sh
   export PATH="./bin/:$PATH"
-  gometalinter --tests --deadline=300s ./...
+  ls
+  pwd
+  gometalinter --deadline=300s ./...
 fi
 
 if [ ${TESTMODE} == "unit" ]; then
