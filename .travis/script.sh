@@ -8,7 +8,7 @@ if [ ${TESTMODE} == "lint" ]; then
   export PATH="./bin/:$PATH"
   ls
   pwd
-  gometalinter --deadline=300s ./...
+  gometalinter --debug --deadline=300s ./...
 fi
 
 if [ ${TESTMODE} == "unit" ]; then
